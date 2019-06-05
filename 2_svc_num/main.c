@@ -67,7 +67,7 @@ void svc_handler_c(uint32_t EXC_RETURN, uint32_t msp)
 	}
 	else
 	{
-		stack_frame_ptr = (uint32_t *)read_msp(); //if 0, stacking used MSP
+		stack_frame_ptr = (uint32_t *)msp; //if 0, stacking used MSP
 		printf("[SVC Handler] Stacking used MSP: 0x%X \r\n\n", (unsigned int)stack_frame_ptr);
 	}
 
